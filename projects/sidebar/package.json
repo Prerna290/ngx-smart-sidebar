@@ -1,0 +1,32 @@
+{
+  "name": "@ngx-smart/ngx-smart-sidebar",
+  "version": "1.0.0",
+  "author": "Prerna <prernaa290@gmail.com>",
+  "description": "A customizable, collapsible, responsive, feature-rich sidebar component for Angular apps.",
+  "license": "MIT",
+  "keywords": [
+    "angular",
+    "sidebar",
+    "menu",
+    "responsive",
+    "component",
+    "navigation",
+    "ngx",
+    "library",
+    "collapsible",
+    "nested-menu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prerna290/ngx-smart-sidebar.git"
+  },
+  "peerDependencies": {
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/router": "^18.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
