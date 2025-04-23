@@ -129,15 +129,15 @@ export interface SidebarSection {
 
 #### Default Sidebar
 
-![Sidebar Image](src/images/sidebar-image.jpeg)
+![Sidebar Image](https://github.com/Prerna290/ngx-smart-sidebar/blob/main/images/default-sidebar.jpeg?raw=true)
 
 #### Custom Hover Background
 
-![Sidebar Custom Hover Backaground Image](src/images/custom-hover-background.jpeg)
+![Sidebar Custom Hover Backaground Image](https://github.com/Prerna290/ngx-smart-sidebar/blob/main/images/custom-hover-background-color.jpeg?raw=true)
 
 #### Custom Sidebar Background
 
-![Sidebar Custom Sidebar Background](src/images/custom-sidebar-background.jpeg)
+![Sidebar Custom Sidebar Background](https://github.com/Prerna290/ngx-smart-sidebar/blob/main/images/custom-sidebar-background.jpeg?raw=true)
 
 ## Custom Header and Footer Content Projection
 
