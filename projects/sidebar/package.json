@@ -20,6 +20,10 @@
     "type": "git",
     "url": "https://github.com/Prerna290/ngx-smart-sidebar.git"
   },
+  "homepage": "https://github.com/Prerna290/ngx-smart-sidebar/blob/main/projects/sidebar/README.md",
+  "bugs": {
+    "url": "https://github.com/Prerna290/ngx-smart-sidebar/issues"
+  },
   "peerDependencies": {
     "@angular/common": "^18.0.0",
     "@angular/core": "^18.0.0",

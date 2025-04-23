@@ -1,72 +1,44 @@
-# ngx-smart-sidebar
+# 🌟 ngx-smart-sidebar
 
 A customizable, collapsible, responsive, feature-rich sidebar component for Angular apps.
 
-![](https://badge.fury.io/js/ngx-smart-sidebar.svg)
+![NPM Version](https://img.shields.io/npm/v/%40ngx-smart%2Fngx-smart-sidebar)
 
 ![](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-[](https://via.placeholder.com/800x400?text=ngx-smart-sidebar+Preview)
+## ✨ Features
 
-## Features
+- 🌈 Fully customizable styling with background/hover colors
+- 📏 Multiple size options (small, medium, large)
+- 🔀 Flexible positioning (left or right)
+- 📊 Multi-level nested navigation support
+- 📱 Responsive design with collapsible functionality
+- 🔄 Angular Router integration
+- 👆 Click-outside closing capability
+- 💾 State persistence between sessions
 
-- 🔄 Responsive design with collapsible functionality
-- 📱 Multiple width options (small, medium, large)
-- 🔄 Left or right positioning
-- 🌈 Customizable styling and colors
-- 📜 Multi-level navigation support
-- 🔗 Full Angular Router integration
-- 📱 Mobile-friendly with click-outside functionality
-- 🔄 State persistence support via service
-
-## Installation
+## 🚀 Installation
 
 ```bash
-npm install ngx-smart-sidebar --save
-
+npm i @ngx-smart/ngx-smart-sidebar --save
 ```
 
-## Setup
+## ⚙️ Basic Implementation
 
-1. Import the SidebarModule in your Angular module:
-
-```tsx
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { SidebarModule } from "@ngx-smart/sidebar";
-import { AppComponent } from "./app.component";
-
-@NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, SidebarModule],
-  bootstrap: [AppComponent],
-})
-export class AppModule {}
-```
-
-2.  Add the sidebar component to your template:
-
-```html
-<lib-sidebar [position]="'left'" [width]="'medium'" [title]="'My Sidebar'" [items]="sidebarItems" [activeItemPath]="activePath" [sidebarId]="'main-sidebar'" [collapsible]="true" [sidebarBackgroundColor]="'#f5f5f5'" [backgroundHighlightColor]="'#e0f7fa'" (sidebarItemSelected)="onItemSelected($event)">
-  <div sidebarHeaderContent>Custom Header</div>
-  <div sidebarFooterContent>Custom Footer</div>
-</lib-sidebar>
-```
-
-### Example
-
-**Basic Sidebar**
+1. Import the SidebarComponent in your Angular Component / Module:
+2. Define your sidebar items
+3. Use the sidebar component in your template
 
 ```tsx
 import { Component } from "@angular/core";
-import { SidebarComponent, SidebarSection } from "ngx-smart-sidebar";
+import { SidebarComponent, SidebarSection } from "@ngx-smart/ngx-smart-sidebar";
 
 @Component({
   selector: "app-root",
   standalone: true,
   imports: [SidebarComponent],
   template: `
-    <lib-sidebar [items]="sidebarItems" [title]="'Navigation'" [sidebarId]="'main-sidebar'"> </lib-sidebar>
+    <lib-sidebar [items]="sidebarItems" [title]="'Navigation'" [activeItemPath]="'/dashboard'" [sidebarId]="'main-sidebar'"> </lib-sidebar>
 
     <div class="content">
       <!-- Your page content here -->
@@ -74,8 +46,6 @@ import { SidebarComponent, SidebarSection } from "ngx-smart-sidebar";
   `,
 })
 export class AppComponent {
-  activeItemPath = "/dashboard";
-
   sidebarItems: SidebarSection[] = [
     {
       header: "Main",
@@ -102,9 +72,25 @@ export class AppComponent {
 }
 ```
 
-## API Reference
+## 🎨 Custom Styling & Content
 
-### Inputs
+```html
+<lib-sidebar [position]="'left'" [width]="'medium'" [title]="'My App'" [items]="sidebarItems" [activeItemPath]="activePath" [sidebarId]="'main-sidebar'" [collapsible]="true" [sidebarBackgroundColor]="'#f5f5f5'" [backgroundHighlightColor]="'#e0f7fa'">
+  <!-- Custom header content -->
+  <div sidebarHeaderContent>
+    <img src="assets/logo.png" alt="Logo" width="120" />
+  </div>
+
+  <!-- Custom footer content -->
+  <div sidebarFooterContent>
+    <p>© 2025 My App</p>
+  </div>
+</lib-sidebar>
+```
+
+## 🛠️ Configuration Options
+
+### Input Properties
 
 | Input                      | Type             | Default     | Description                                                                                    |
 | -------------------------- | ---------------- | ----------- | ---------------------------------------------------------------------------------------------- |
@@ -139,7 +125,26 @@ export interface SidebarSection {
 }
 ```
 
-## Custom Header and Footer Content
+### 📸 Visual Examples
+
+#### Default Sidebar
+
+![Sidebar Image](src/images/sidebar-image.jpeg)
+
+#### Custom Hover Background
+
+![Sidebar Custom Hover Backaground Image](src/images/custom-hover-background.jpeg)
+
+#### Custom Sidebar Background
+
+![Sidebar Custom Sidebar Background](src/images/custom-sidebar-background.jpeg)
+
+## Custom Header and Footer Content Projection
+
+The sidebar provides two content projection slots:
+
+- sidebarHeaderContent: Custom content for sidebar header area
+- sidebarFooterContent: Custom content for sidebar footer area
 
 You can add custom content to the header and footer of the sidebar:
 
@@ -155,23 +160,10 @@ You can add custom content to the header and footer of the sidebar:
 </lib-sidebar>
 ```
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-## **Demo Application**
-
-Create a demo app (`src/`) showcasing:
-
-- Basic usage
-- Nested menus
-- Theming
-- Responsive behavior
-
-Add screenshots/GIFs to README.
